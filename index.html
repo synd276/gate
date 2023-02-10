@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://kit.fontawesome.com/980cf330d1.js" crossorigin="anonymous"></script>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Cổng kết nối TTCNTT</title>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" media="screen" href="demo/css/style.css">
+	
+</head>
+	<body >
+		<div id="particles-js">
+			<div class="container">
+				<div class="text_title">
+					<h1>Sở Tài nguyên và Môi trường tỉnh Tiền Giang</h1>
+					<h2>Trung tâm Công nghệ thông tin</h2>
+				</div>
+
+				<div class="boxes" id="boxes">
+					<script>
+						const list = [
+							{
+								"href": "https://stnmt.tiengiang.gov.vn",
+								"icon": "fa-home",
+								"name": "Cổng thông tin Sở Tài nguyên và Môi trường"
+							},
+							{
+								"href": "http://httt.ttcntnmt.com.vn",
+								"icon": "fa-globe-asia",
+								"name": "Hệ thống thu thập dữ liệu Tài nguyên môi trường"
+							},
+							{
+								"href": "http://tnn.ttcntnmt.com.vn",
+								"icon": "fa-water",
+								"name": "Quản lý tài nguyên nước tỉnh Tiền Giang"
+							},
+							{
+								"href": "http://qttd.ttcntnmt.com.vn",
+								"icon": "fa-seedling",
+								"name": "Phần mềm Quản lý dữ liệu Quan trắc tự động"
+							},
+							{
+								"href": "http://hscn.ttcntnmt.com.vn",
+								"icon": "fa-server",
+								"name": "Kho hồ sơ Chuyên ngành"
+							},
+							{
+								"href": "http://hs.ttcntnmt.com.vn",
+								"icon": "fa-file-signature",
+								"name": "Kho hồ sơ chỉnh lý"
+							},
+							{
+								"href": "http://dc.ttcntnmt.com.vn",
+								"icon": "fa-map-marked-alt",
+								"name": "Quản lý Đất công"
+							},
+							{
+								"href": "http://dlm.ttcntnmt.com.vn",
+								"icon": "fa-uncharted",
+								"name": "Quản lý Điểm lấy mẫu Môi trường"
+							},
+							{
+								"href": "http://moitruong.ttcntnmt.com.vn",
+								"icon": "fa-seedling",
+								"name": "Hệ thống Dữ liệu Môi trường"
+							},
+							{
+								"href": "http://bdkh.ttcntnmt.com.vn",
+								"icon": "fa-cloud-bolt-sun",
+								"name": "Hệ thống dữ liệu Biến đổi khí hậu"
+							},
+							{
+								"href": "",
+								"icon": "",
+								"name": ""
+							},
+						];
+						
+						list.forEach(item => {
+							if (item.href!=""){
+								console.log(item.href);
+								console.log(item.icon);
+								console.log(item.name);
+								let cell = document.createElement("div");
+								cell.className = "col-md-3 col-sm-6 col-xs-12";
+								let a = document.createElement("a");
+								a.target="_blank";
+								a.href = item.href;
+								let box= document.createElement("div");
+								box.className="box";
+								let symbol = document.createElement("div");
+								symbol.className = "symbol";
+								let icon = document.createElement("i");
+								icon.className = "fas " + item.icon;
+								let name = document.createElement("h3");
+								name.innerHTML = item.name;
+
+								symbol.appendChild(icon);
+								box.appendChild(symbol);
+								box.appendChild(name);
+								a.appendChild(box);
+								cell.appendChild(a);
+								
+								document.getElementById("boxes").appendChild(cell);
+							}
+						});
+
+					</script>
+				</div>
+			</div>
+		
+		</div>
+	<!-- Fontawesome JS -->
+	<script type="text/javascript" src="js/all.min.js"></script>
+	<!-- <script src="js/app.js"></script> -->
+
+	<script src="demo/particles/particles.js"></script>
+	<script src="demo/js/app.js"></script>
+	<!-- stats.js -->
+	<script src="demo/js/lib/stats.js"></script>
+	<!-- <script>
+	var count_particles, stats, update;
+	stats = new Stats;
+	stats.setMode(0);
+	stats.domElement.style.position = 'absolute';
+	stats.domElement.style.left = '0px';
+	stats.domElement.style.top = '0px';
+	document.body.appendChild(stats.domElement);
+	count_particles = document.querySelector('.js-count-particles');
+	update = function() {
+		stats.begin();
+		stats.end();
+		if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+		count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+		}
+		requestAnimationFrame(update);
+	};
+	requestAnimationFrame(update);
+	</script> -->
+	</body>
+</html>
